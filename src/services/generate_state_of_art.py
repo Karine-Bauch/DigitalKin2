@@ -8,11 +8,8 @@ def extract_latent_space(prompt):
     """
     Extracts the latent space representation of the model for a given prompt.
 
-    params:
-        prompt (str): The input text prompt.
-
-    returns:
-        torch.Tensor: The latent space representation (hidden states) of the model.
+    params: prompt (str): The input text prompt.
+    returns: torch.Tensor: The latent space representation (hidden states) of the model.
     """
     # Tokenize the input prompt
     inputs = tokenizer(prompt, return_tensors="pt")
