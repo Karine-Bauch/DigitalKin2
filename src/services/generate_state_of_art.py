@@ -31,6 +31,8 @@ def generate_text(prompt) -> tuple:
         attention_mask=inputs['attention_mask'],
         max_new_tokens=200, 
         num_return_sequences=1,
+        temperature=0.7,
+        top_p=0.9,
     )
     generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
 
