@@ -1,7 +1,7 @@
 import services.generate_text
 
 
-def generate(custom_details: str = "") -> dict:
+def generate(custom_details: str = "") -> str:
     """
     Generates a state of the art text for an Aider developer who doesn't master Python,
     providing a global view of the latest technologies to automate Python development.

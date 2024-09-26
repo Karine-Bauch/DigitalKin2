@@ -9,7 +9,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
 pad_token_id = tokenizer.eos_token_id
 
-def generate(prompt) -> tuple:
+def generate(prompt) -> str:
     """
     Extracts the latent space representation of the model for a given prompt.
 
