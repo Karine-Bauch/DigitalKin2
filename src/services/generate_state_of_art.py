@@ -4,6 +4,9 @@ from transformers import GPT2LMHeadModel, GPT2Tokenizer
 model_name = "gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+
+pad_token_id = tokenizer.eos_token_id
+
 def extract_latent_space(prompt) -> tuple:
     """
     Extracts the latent space representation of the model for a given prompt.
@@ -26,7 +29,6 @@ def extract_latent_space(prompt) -> tuple:
         attention_mask=inputs['attention_mask'],
         max_length=50, 
         num_return_sequences=1,
-        pad_token_id=tokenizer.eos_token_id
     )
     generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
 
