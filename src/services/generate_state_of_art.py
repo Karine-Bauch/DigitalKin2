@@ -44,9 +44,12 @@ def generate_state_of_art_for_aider_developer() -> str:
     returns: str: The generated state of the art text.
     """
     prompt = (
-        "As an Aider developer who doesn't master Python, you should be aware of the latest technologies "
-        "to automate Python development. These include AI-driven code completion tools, automated testing frameworks, "
-        "and continuous integration systems. Here is a global view of these technologies:"
+        "As an Aider developer looking to enhance your Python development skills, it's crucial to explore the latest "
+        "technologies that can automate and streamline your workflow. These include advanced AI-driven code completion "
+        "tools like GitHub Copilot, automated testing frameworks such as PyTest and Robot Framework, and robust "
+        "continuous integration systems like Jenkins and GitLab CI/CD. Additionally, consider leveraging containerization "
+        "with Docker and orchestration with Kubernetes to manage your applications efficiently. Here is an overview of "
+        "these cutting-edge technologies and how they can transform your development process:"
     )
     
     # Call the generate_text function with the prompt
