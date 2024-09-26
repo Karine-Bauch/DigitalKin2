@@ -25,3 +25,15 @@ def extract_latent_space(prompt) -> tuple:
     generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True)
 
     return hidden_states, generated_text
+
+if __name__ == "__main__":
+    # Test the extract_latent_space function
+    test_prompt = "Once upon a time"
+    latent_space, generated_text = extract_latent_space(test_prompt)
+    
+    print("Latent Space Representation:")
+    for layer in latent_space:
+        print(layer.shape)
+    
+    print("\nGenerated Text:")
+    print(generated_text)
