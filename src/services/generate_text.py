@@ -19,10 +19,7 @@ def generate(prompt: str) -> str:
     # Tokenize the input prompt
     inputs: transformers.BatchEncoding = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True)
 
-    # Extract the hidden states (latent space)
-    # hidden_states = outputs.hidden_states   NOT USED
-
-    # Generate text from the latent space
+    # Generate text from the input_ids
     generated_outputs = model.generate(
         inputs['input_ids'], 
         attention_mask=inputs['attention_mask'],
