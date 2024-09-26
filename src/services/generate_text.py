@@ -1,7 +1,5 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-from services.generate_state_of_art import generate
-
 # Load pre-trained model and tokenizer
 model_name = "gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_name)
@@ -11,7 +9,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
 pad_token_id = tokenizer.eos_token_id
 
-def generate_text(prompt) -> tuple:
+def generate(prompt) -> tuple:
     """
     Extracts the latent space representation of the model for a given prompt.
 
@@ -22,10 +20,10 @@ def generate_text(prompt) -> tuple:
     inputs = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True)
 
     # Pass the inputs through the model to get the outputs
-    outputs = model(**inputs, output_hidden_states=True)
+    # outputs = model(**inputs, output_hidden_states=True)   NOT USED
 
     # Extract the hidden states (latent space)
-    hidden_states = outputs.hidden_states
+    # hidden_states = outputs.hidden_states   NOT USED
 
     # Generate text from the latent space
     generated_outputs = model.generate(
@@ -40,4 +38,4 @@ def generate_text(prompt) -> tuple:
     )
     generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
 
-    return hidden_states, generated_text
+    return generated_text

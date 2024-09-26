@@ -1,8 +1,8 @@
 import services.generate_text
-from services.structure_state_of_art import structure_state_of_art
+import services.structure_state_of_art
 
 
-def generate(custom_details: str = "") -> str:
+def generate(custom_details: str = "") -> dict:
     """
     Generates a state of the art text for an Aider developer who doesn't master Python,
     providing a global view of the latest technologies to automate Python development.
@@ -15,9 +15,9 @@ def generate(custom_details: str = "") -> str:
     )
 
     # Call the generate_text function with the prompt
-    _, generated_text = services.generate_text.generate_text(prompt)
+    generated_text = services.generate_text.generate(prompt)
 
-    structured_text = structure_state_of_art(generated_text)
+    structured_text = services.structure_state_of_art.structure(generated_text)
     return structured_text
 
 

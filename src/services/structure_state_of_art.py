@@ -1,4 +1,4 @@
-def structure_state_of_art(generated_text: str) -> dict:
+def structure(generated_text: tuple) -> dict:
     """
     Structures the generated state of the art text into a dictionary with sections.
 
