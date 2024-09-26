@@ -7,17 +7,17 @@ def generate(custom_details: str = "") -> str:
 
     returns: str: The generated and formated state of the art text.
     """
-    prompt = (
+    prompt: str = (
         f"As an Aider developer aiming to master Python automation technologies, this document provides a comprehensive "
         f"state of the art analysis {custom_details}"
     )
-    introduction = services.generate_text.generate(f"{prompt}. Here is an introduction :").replace(prompt, "")
-    synthesis = services.generate_text.generate(f"{prompt}. Here is a global synthesis :").replace(prompt, "")
-    analysis = services.generate_text.generate(f"{prompt}. Here is a critical analysis :").replace(prompt, "")
-    contribution = services.generate_text.generate(f"{prompt}. Here is a proposed contribution :").replace(prompt, "")
-    conclusion = services.generate_text.generate(f"{prompt}. Here is a conclusion :").replace(prompt, "")
+    introduction: str = services.generate_text.generate(f"{prompt}. Here is an introduction :").replace(prompt, "")
+    synthesis: str = services.generate_text.generate(f"{prompt}. Here is a global synthesis :").replace(prompt, "")
+    analysis: str = services.generate_text.generate(f"{prompt}. Here is a critical analysis :").replace(prompt, "")
+    contribution: str = services.generate_text.generate(f"{prompt}. Here is a proposed contribution :").replace(prompt, "")
+    conclusion: str = services.generate_text.generate(f"{prompt}. Here is a conclusion :").replace(prompt, "")
 
-    structured_answer = (f"Introduction:\n"
+    structured_answer: str = (f"Introduction:\n"
                          f"{introduction}\n"
                          f"Global synthesis:\n"
                          f"{synthesis}\n"

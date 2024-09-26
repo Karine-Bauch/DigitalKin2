@@ -9,7 +9,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
 pad_token_id = tokenizer.eos_token_id
 
-def generate(prompt) -> str:
+def generate(prompt: str) -> str:
     """
     Generates a text from a model, using a provided prompt
 
@@ -17,10 +17,7 @@ def generate(prompt) -> str:
     returns: tuple: A tuple containing the latent space representation (hidden states) and the generated text.
     """
     # Tokenize the input prompt
-    inputs = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True)
-
-    # Pass the inputs through the model to get the outputs
-    # outputs = model(**inputs, output_hidden_states=True)   NOT USED
+    inputs: transformers.BatchEncoding = tokenizer(prompt, return_tensors="pt", padding=True, truncation=True)
 
     # Extract the hidden states (latent space)
     # hidden_states = outputs.hidden_states   NOT USED
@@ -36,6 +33,6 @@ def generate(prompt) -> str:
         no_repeat_ngram_size=3,
         early_stopping=True,
     )
-    generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
+    generated_text: str = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
 
     return generated_text
