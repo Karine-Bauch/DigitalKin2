@@ -1,9 +1,9 @@
-from transformers import GPT2LMHeadModel, GPT2Tokenizer
+import transformers
 
 # Load pre-trained model and tokenizer
 model_name = "gpt2"
-model = GPT2LMHeadModel.from_pretrained(model_name)
-tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+model = transformers.GPT2LMHeadModel.from_pretrained(model_name)
+tokenizer = transformers.GPT2Tokenizer.from_pretrained(model_name)
 
 # Set the padding token
 tokenizer.pad_token = tokenizer.eos_token
