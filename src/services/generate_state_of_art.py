@@ -48,13 +48,20 @@ def generate_state_of_art_for_aider_developer() -> str:
     returns: str: The generated state of the art text.
     """
     prompt = (
-        "As an Aider developer looking to enhance your Python development skills, it's crucial to explore the latest "
-        "technologies that can automate and streamline your workflow. These include advanced AI-driven code completion "
-        "tools like GitHub Copilot, automated testing frameworks such as PyTest and Robot Framework, and robust "
-        "continuous integration systems like Jenkins and GitLab CI/CD. Additionally, consider leveraging containerization "
-        "with Docker and orchestration with Kubernetes to manage your applications efficiently. Here is an overview of "
-        "these cutting-edge technologies and how they can transform your development process, displayed with a general "
-        "introduction, a Synthesis of Existing Works, a critical analysis, a proposed contribution and a conclusion :"
+        "As an Aider developer aiming to master Python automation technologies, this document provides a comprehensive "
+        "state of the art analysis. \n\n"
+        "Introduction: Python has become a pivotal language in the realm of software development, offering a plethora of "
+        "tools and frameworks that enhance productivity and efficiency. This document explores the latest advancements "
+        "in Python automation technologies.\n\n"
+        "Synthesis of Existing Works: Recent developments in AI-driven code completion, such as GitHub Copilot, have "
+        "revolutionized coding practices. Automated testing frameworks like PyTest and Robot Framework ensure robust "
+        "software quality, while CI/CD systems like Jenkins and GitLab CI/CD streamline deployment processes.\n\n"
+        "Critical Analysis: Despite these advancements, challenges remain in integrating these tools seamlessly into "
+        "existing workflows. The learning curve and resource requirements can be significant barriers for developers.\n\n"
+        "Proposed Contribution: To address these challenges, this document proposes a framework that integrates these "
+        "technologies into a cohesive system, reducing complexity and enhancing usability for developers.\n\n"
+        "Conclusion: By leveraging these cutting-edge technologies, developers can significantly enhance their productivity "
+        "and streamline their development processes, paving the way for more efficient and innovative software solutions."
     )
     
     # Call the generate_text function with the prompt
