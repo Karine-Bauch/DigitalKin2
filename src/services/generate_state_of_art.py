@@ -9,7 +9,7 @@ tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 tokenizer.pad_token = tokenizer.eos_token
 pad_token_id = tokenizer.eos_token_id
 
-def extract_latent_space(prompt) -> tuple:
+def generate_text(prompt) -> tuple:
     """
     Extracts the latent space representation of the model for a given prompt.
 
@@ -49,13 +49,13 @@ def generate_state_of_art_for_aider_developer() -> str:
         "and continuous integration systems. Here is a global view of these technologies:"
     )
     
-    # Call the extract_latent_space function with the prompt
-    _, generated_text = extract_latent_space(prompt)
+    # Call the generate_text function with the prompt
+    _, generated_text = generate_text(prompt)
 
     return generated_text
-    # Test the extract_latent_space function
+    # Test the generate_text function
     test_prompt = "Once upon a time"
-    latent_space, test_generated_text = extract_latent_space(test_prompt)
+    latent_space, test_generated_text = generate_text(test_prompt)
     
     print("Latent Space Representation:")
     for layer in latent_space:
