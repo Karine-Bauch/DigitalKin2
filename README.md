@@ -6,6 +6,7 @@
 ```bash
 git clone git@github.com:Karine-Bauch/DigitalKin2.git
 ```
+and open it in IDE
 
 2. Checkout to trunk branch
 
