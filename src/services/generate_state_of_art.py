@@ -1,4 +1,5 @@
 import services.generate_text
+from services.structure_state_of_art import structure_state_of_art
 
 
 def generate(custom_details: str = "") -> str:
@@ -16,7 +17,8 @@ def generate(custom_details: str = "") -> str:
     # Call the generate_text function with the prompt
     _, generated_text = services.generate_text.generate_text(prompt)
 
-    return generated_text
+    structured_text = structure_state_of_art(generated_text)
+    return structured_text
 
 
 if __name__ == "__main__":
