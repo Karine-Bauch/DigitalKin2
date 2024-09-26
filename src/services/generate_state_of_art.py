@@ -9,7 +9,7 @@ def extract_latent_space(prompt) -> tuple:
     Extracts the latent space representation of the model for a given prompt.
 
     params: prompt (str): The input text prompt.
-    returns: torch.Tensor: The latent space representation (hidden states) of the model.
+    returns: tuple: A tuple containing the latent space representation (hidden states) and the generated text.
     """
     # Tokenize the input prompt
     inputs = tokenizer(prompt, return_tensors="pt")
@@ -20,4 +20,8 @@ def extract_latent_space(prompt) -> tuple:
     # Extract the hidden states (latent space)
     hidden_states = outputs.hidden_states
 
-    return hidden_states
+    # Generate text from the latent space
+    generated_outputs = model.generate(inputs['input_ids'], max_length=50, num_return_sequences=1)
+    generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True)
+
+    return hidden_states, generated_text
