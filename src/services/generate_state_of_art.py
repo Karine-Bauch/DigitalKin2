@@ -1,5 +1,4 @@
 import services.generate_text
-import services.structure_state_of_art
 
 
 def generate(custom_details: str = "") -> dict:
