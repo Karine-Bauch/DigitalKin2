@@ -36,7 +36,23 @@ def extract_latent_space(prompt) -> tuple:
 
     return hidden_states, generated_text
 
-if __name__ == "__main__":
+def generate_state_of_art_for_aider_developer() -> str:
+    """
+    Generates a state of the art text for an Aider developer who doesn't master Python,
+    providing a global view of the latest technologies to automate Python development.
+
+    returns: str: The generated state of the art text.
+    """
+    prompt = (
+        "As an Aider developer who doesn't master Python, you should be aware of the latest technologies "
+        "to automate Python development. These include AI-driven code completion tools, automated testing frameworks, "
+        "and continuous integration systems. Here is a global view of these technologies:"
+    )
+    
+    # Call the extract_latent_space function with the prompt
+    _, generated_text = extract_latent_space(prompt)
+
+    return generated_text
     # Test the extract_latent_space function
     test_prompt = "Once upon a time"
     latent_space, test_generated_text = extract_latent_space(test_prompt)
