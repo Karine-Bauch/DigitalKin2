@@ -11,7 +11,7 @@ pad_token_id = tokenizer.eos_token_id
 
 def generate(prompt) -> str:
     """
-    Extracts the latent space representation of the model for a given prompt.
+    Generates a text from a model, using a provided prompt
 
     params: prompt (str): The input text prompt.
     returns: tuple: A tuple containing the latent space representation (hidden states) and the generated text.
