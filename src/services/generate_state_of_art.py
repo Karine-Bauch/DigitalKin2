@@ -29,10 +29,12 @@ def generate_text(prompt) -> tuple:
     generated_outputs = model.generate(
         inputs['input_ids'], 
         attention_mask=inputs['attention_mask'],
-        max_new_tokens=200, 
+        max_new_tokens=1000,
         num_return_sequences=1,
-        temperature=0.7,
+        temperature=0.6,
         top_p=0.9,
+        no_repeat_ngram_size=3,
+        early_stopping=True,
     )
     generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
 
@@ -51,7 +53,8 @@ def generate_state_of_art_for_aider_developer() -> str:
         "tools like GitHub Copilot, automated testing frameworks such as PyTest and Robot Framework, and robust "
         "continuous integration systems like Jenkins and GitLab CI/CD. Additionally, consider leveraging containerization "
         "with Docker and orchestration with Kubernetes to manage your applications efficiently. Here is an overview of "
-        "these cutting-edge technologies and how they can transform your development process:"
+        "these cutting-edge technologies and how they can transform your development process, displayed with a general "
+        "introduction, a Synthesis of Existing Works, a critical analysis, a proposed contribution and a conclusion :"
     )
     
     # Call the generate_text function with the prompt
