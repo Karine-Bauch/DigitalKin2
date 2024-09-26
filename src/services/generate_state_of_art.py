@@ -56,13 +56,8 @@ def generate_state_of_art_for_aider_developer() -> str:
 
 
 if __name__ == "__main__":
-    # Test the generate_text function
-    test_prompt = "Once upon a time"
-    latent_space, test_generated_text = generate_text(test_prompt)
+    # Test the generate_state_of_art_for_aider_developer function
+    state_of_art_text = generate_state_of_art_for_aider_developer()
     
-    print("Latent Space Representation:")
-    for layer in latent_space:
-        print(layer.shape)
-    
-    print("\nGenerated Text:")
-    print(test_generated_text)
+    print("State of the Art Text for Aider Developer:")
+    print(state_of_art_text)
