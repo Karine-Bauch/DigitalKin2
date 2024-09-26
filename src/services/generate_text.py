@@ -1,6 +1,6 @@
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
-from services.generate_state_of_art import generate_state_of_art
+from services.generate_state_of_art import generate
 
 # Load pre-trained model and tokenizer
 model_name = "gpt2"
