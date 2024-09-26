@@ -5,6 +5,8 @@ model_name = "gpt2"
 model = GPT2LMHeadModel.from_pretrained(model_name)
 tokenizer = GPT2Tokenizer.from_pretrained(model_name)
 
+# Set the padding token
+tokenizer.pad_token = tokenizer.eos_token
 pad_token_id = tokenizer.eos_token_id
 
 def extract_latent_space(prompt) -> tuple:
