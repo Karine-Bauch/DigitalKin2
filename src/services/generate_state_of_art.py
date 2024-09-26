@@ -3,10 +3,9 @@ import services.generate_text
 
 def generate(custom_details: str = "") -> str:
     """
-    Generates a state of the art text for an Aider developer who doesn't master Python,
-    providing a global view of the latest technologies to automate Python development.
+    Generates a state of the art text.
 
-    returns: str: The generated state of the art text.
+    returns: str: The generated and formated state of the art text.
     """
     prompt = (
         f"As an Aider developer aiming to master Python automation technologies, this document provides a comprehensive "
