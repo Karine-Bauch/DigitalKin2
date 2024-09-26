@@ -1,0 +1,135 @@
+
+# 2024-09-26 13:45:18.644603
++/add src/services/generate_state_of_art.py
+
+# 2024-09-26 13:46:00.723453
++upload a pretrained model GPT2 with transformers
+
+# 2024-09-26 13:46:19.327341
++N
+
+# 2024-09-26 13:47:00.829899
++Create a function to extract latent space of the model when giving a prompt
+
+# 2024-09-26 13:47:58.780808
++in the function change docstring with params: and returns: instead of Args and Returns
+
+# 2024-09-26 13:48:35.477789
++add the return type of the function
+
+# 2024-09-26 13:49:58.818506
++Add in the function, the text genration from the latent space
+
+# 2024-09-26 13:51:42.105957
++add a test in this file to check the function is correct, in the if __name__ == "__main__", 
+
+# 2024-09-26 13:53:16.457611
++There are these warnings : FutureWarning: `clean_up_tokenization_spaces` was not set. It will be set to `True` by default. This behavior will be depracted in transformers v4.45, and will be then set to `False` by default. For more details check this issue: https://github.com/huggingface/transformers/issues/31884
++  warnings.warn(
++The attention mask and the pad token id were not set. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
++Setting `pad_token_id` to `eos_token_id`:50256 for open-end generation.
++The attention mask is not set and cannot be inferred from input because pad token is same as eos token. As a consequence, you may observe unexpected behavior. Please pass your input's `attention_mask` to obtain reliable results.
+
+# 2024-09-26 14:00:42.704451
++shadows name 'generated_text' from outer scope, fix it
+
+# 2024-09-26 14:02:25.043201
++error : ValueError: Asking to pad but the tokenizer does not have a padding token. Please select a token to use as `pad_token` `(tokenizer.pad_token = tokenizer.eos_token e.g.)` or add a new pad token via `tokenizer.add_special_tokens({'pad_token': '[PAD]'})`.
+
+# 2024-09-26 14:06:19.135149
++add a function to generate a text, giving a state of art for a Aider developer, who doesn't master Python, and wants a global view of last technologies to automate Python development
+
+# 2024-09-26 14:07:51.448721
++/undo
+
+# 2024-09-26 14:08:55.533225
++modify the function to generate a text, giving a state of art for a Aider developer, who doesn't master Python, and wants a global view of last technologies to automate Python development
+
+# 2024-09-26 14:09:21.754526
++/undo
+
+# 2024-09-26 14:12:17.769100
++create a function which call the `extract_latent_space` function with an appropriate prompt for an Aider developer, who doesn't master Python, and wants a global view of last technologies to automate Python development, need to receive a response presented as a state of art
+
+# 2024-09-26 14:13:30.270663
++change the name of `extract_latent_space` to generate_text
+
+# 2024-09-26 14:14:56.037934
++modify the if __name__ part to test the `generate_state_of_art_for_aider_developer`
+
+# 2024-09-26 14:15:27.547197
++ValueError: Input length of input_ids is 51, but `max_length` is set to 50. This can lead to unexpected behavior. You should consider increasing `max_length` or, better yet, setting `max_new_tokens`.
+
+# 2024-09-26 14:17:02.251888
++here is the result, that's not what I want, change the prompt
+
+# 2024-09-26 14:17:48.184647
++here is the result, that's not what I want, change the prompt : State of the Art Text for Aider Developer:
++As an Aider developer who doesn't master Python, you should be aware of the latest technologies to automate Python development. These include AI-driven code completion tools, automated testing frameworks, and continuous integration systems. Here is a global view of these technologies:
++
++Python is a programming language that is used to build and run applications. It is a language that is used to build and run applications. It is a language that is used to build and run applications. It is a language that is used to
+
+# 2024-09-26 14:19:33.134196
++Modify the code because I got only one phrase instead of receiving a complete state of art
+
+# 2024-09-26 14:20:30.001578
++The answer juste repeat the same sentence
+
+# 2024-09-26 14:30:24.071449
++The actual promptdon't give the result expected, change it to get a state of art with a general introduction, a Synthesis of Existing Works, a critical analysis, a proposed contribution and a conclusion
+
+# 2024-09-26 14:40:09.278096
++/add src/services/generate_text.py
+
+# 2024-09-26 14:40:43.805082
++Change the functions to customize the complétion
+
+# 2024-09-26 14:41:16.398145
++/undo
+
+# 2024-09-26 14:41:52.043391
++add an arg in `generate_state_of_art` function to customize the prompt
+
+# 2024-09-26 14:42:24.786885
++/undo
+
+# 2024-09-26 14:59:05.922971
++When I run the api with fastapi dev src/api/main.py, I got an error : ImportError: cannot import name 'generate' from partially initialized module 'services.generate_state_of_art' (most likely due to a circular import) (/home/kbauch/Documents/Tests Tech/DigitalKin2/src/services/generate_state_of_art.py)
++
+
+# 2024-09-26 15:00:31.709223
++ERROR:    [Errno 98] Address already in use
++Change the port from 8000 to another appropriate
+
+# 2024-09-26 15:00:42.564290
++N
+
+# 2024-09-26 15:01:06.263291
++undo
+
+# 2024-09-26 15:01:10.981669
++N
+
+# 2024-09-26 15:01:14.321471
++/undo
+
+# 2024-09-26 15:07:12.364016
++add a file in which you create a function to structure the state_of_art generation, passing the `generate_state_of_art` return, returning a structured answer 
+
+# 2024-09-26 15:14:55.680850
++use the function `structure_state_of_art` after state_of_art generation
+
+# 2024-09-26 15:16:31.203547
++The return of generate is now a dict, add a function to recreate a string, and return a string
+
+# 2024-09-26 15:17:05.145512
++N
+
+# 2024-09-26 15:18:56.648273
++/undo
+
+# 2024-09-26 15:25:28.945263
++change the `structure` function to use a tuple instead of a string
+
+# 2024-09-26 15:26:10.229789
++/undo
