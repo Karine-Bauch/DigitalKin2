@@ -29,7 +29,7 @@ def generate_text(prompt) -> tuple:
     generated_outputs = model.generate(
         inputs['input_ids'], 
         attention_mask=inputs['attention_mask'],
-        max_length=50, 
+        max_new_tokens=50, 
         num_return_sequences=1,
     )
     generated_text = tokenizer.decode(generated_outputs[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
